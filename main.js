@@ -15,16 +15,10 @@ const listStudents = [
     }
 ];
 
-const pointsMax = listStudents.filter(function (score)
-{
-    if (score.points >= 697)
-    {
-    return true;
-  }
-});
+const pointsMax = listStudents.filter(score => score.points >= 697);
 
-pointsMax.forEach(function (element) {
-    document.getElementById("reiting").insertAdjacentHTML(
+pointsMax.forEach(element =>
+  document.getElementById("reiting").insertAdjacentHTML(
       "beforeend", 
       `
       <tr>
@@ -39,5 +33,4 @@ pointsMax.forEach(function (element) {
       </td>
       </tr>
       `,
-    );
-  });
+));
